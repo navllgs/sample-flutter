@@ -3,14 +3,21 @@ import './location_detail.dart';
 import 'mocks/mock_location.dart';
 import 'models/location.dart';
 import 'location_list.dart';
+import 'routes.dart';
 
+final Location mockLocation = MockLocation.FetchAny();
+final List<Location> mockLocations = MockLocation.FetchAll();
 void main() {
-  final Location mockLocation = MockLocation.FetchAny();
-  final List<Location> mockLocations = MockLocation.FetchAll();
   return runApp(
     MaterialApp(
       // home: LocationDetail(mockLocation),
-      home: LocationList(mockLocations),
+      // home: LocationList(mockLocations),
+      // initialRoute: '/',
+      // routes: {
+      //   '/': (context) => LocationList(mockLocations),
+      //   '/location_detail': (context) => LocationDetail(null)
+      // },
+      onGenerateRoute: Routes.routes(),
     ),
   );
 }
