@@ -4,8 +4,8 @@ import '../models/location_fact.dart';
 class MockLocation extends Location {
   static FetchAny() {
     return Location(
-        name: 'Arashiyama Bamboo Grove, Kyoto, Japan',
-        url: 'https://goo.gl/Npy2kB',
+        name: 'Arashiyama Bamboo Grove',
+        url: 'https://vignette.wikia.nocookie.net/naruto/images/2/21/Sasuke_Part_1.png/revision/latest?cb=20170716092103',
         facts: <LocationFact>[
           LocationFact(
             title: 'Summary',
