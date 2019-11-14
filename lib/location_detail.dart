@@ -10,22 +10,23 @@ class LocationDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
-      appBar: AppBar(
-        title: Text(
-          this.location.name,
-          style: Styles.navBarTitleStyle,
+        backgroundColor: Colors.grey[200],
+        appBar: AppBar(
+          title: Text(
+            this.location.name,
+            style: Styles.navBarTitleStyle,
+          ),
         ),
-      ),
-      body: Container(
-        margin: EdgeInsets.all(8),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: _renderBody(context, this.location),
-        ),
-      ),
-    );
+        body: SingleChildScrollView(
+          child: Container(
+            margin: EdgeInsets.all(8),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: _renderBody(context, this.location),
+            ),
+          ),
+        ));
   }
 
   List<Widget> _renderBody(BuildContext context, Location location) {
@@ -58,8 +59,7 @@ class LocationDetail extends StatelessWidget {
   Widget _sectionText(String text) {
     return Container(
       margin: EdgeInsets.fromLTRB(25, 25, 25, 15),
-      child:
-          Text(text, textAlign: TextAlign.left, style: Styles.textDefault),
+      child: Text(text, textAlign: TextAlign.left, style: Styles.textDefault),
     );
   }
 
