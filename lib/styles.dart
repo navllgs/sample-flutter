@@ -17,7 +17,7 @@ class Styles {
     color: _textColorStrong,
   );
 
-  static final textDescription = TextStyle(
+  static final textDefault = TextStyle(
     fontFamily: _fontNameDefault,
     fontSize: _textSizeDefault,
     color: _textColorDefault,

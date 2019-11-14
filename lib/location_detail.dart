@@ -59,7 +59,7 @@ class LocationDetail extends StatelessWidget {
     return Container(
       margin: EdgeInsets.fromLTRB(25, 25, 25, 15),
       child:
-          Text(text, textAlign: TextAlign.left, style: Styles.textDescription),
+          Text(text, textAlign: TextAlign.left, style: Styles.textDefault),
     );
   }
 
