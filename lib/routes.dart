@@ -1,7 +1,7 @@
 import 'main.dart';
 import 'package:flutter/material.dart';
-import 'location_detail.dart';
-import 'location_list.dart';
+import './screens/location_detail_screen.dart';
+import './screens/location_list_screen.dart';
 
 const LocationsRoute = '/';
 const LocationsDetailRoute = '/location_detail';

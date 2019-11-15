@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'models/location.dart';
-import 'styles.dart';
+import '../models/location.dart';
+import '../styles.dart';
 
 class LocationDetail extends StatelessWidget {
   final Location location;

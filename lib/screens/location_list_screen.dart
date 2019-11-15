@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sampleapp/location_detail.dart';
-import 'models/location.dart';
-import 'styles.dart';
-import 'routes.dart';
+import 'location_detail_screen.dart';
+import '../models/location.dart';
+import '../styles.dart';
+import '../routes.dart';
 
 class LocationList extends StatelessWidget {
   final List<Location> locations;
@@ -58,7 +58,8 @@ class LocationList extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                  padding: EdgeInsets.symmetric(horizontal: 12.0,vertical:8.0),
+                  padding:
+                      EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
                   decoration:
                       BoxDecoration(color: Colors.black.withOpacity(0.5)),
                   child: Column(
@@ -67,14 +68,7 @@ class LocationList extends StatelessWidget {
                           child: _itemTitle(location),
                           onTap: () =>
                               _navigateToLocationDetail(context, location)),
-                      Text(
-                        location.facts[0].text,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                      ),
+                      _subTitle(location)
                     ],
                   )),
             ],
@@ -130,6 +124,21 @@ class LocationList extends StatelessWidget {
         maxLines: 1,
         style: TextStyle(
             fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+
+  Widget _subTitle(Location location) {
+    return Container(
+      width: double.infinity,
+      child: Text(
+        location.facts[0].text,
+        textAlign: TextAlign.left,
+        maxLines: 2,
+        overflow: TextOverflow.ellipsis,
+        style: TextStyle(
+          color: Colors.white,
+        ),
       ),
     );
   }

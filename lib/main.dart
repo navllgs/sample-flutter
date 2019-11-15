@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import './location_detail.dart';
+import './screens/location_detail_screen.dart';
+import './screens/location_list_screen.dart';
 import 'mocks/mock_location.dart';
 import 'models/location.dart';
-import 'location_list.dart';
 import 'routes.dart';
 
 final Location mockLocation = MockLocation.FetchAny();
