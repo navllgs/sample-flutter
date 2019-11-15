@@ -11,12 +11,7 @@ class LocationDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[200],
-        appBar: AppBar(
-          title: Text(
-            this.location.name,
-            style: Styles.navBarTitleStyle,
-          ),
-        ),
+        appBar: Styles.AppBarDefault(this.location.name),
         body: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.all(8),
@@ -70,18 +65,6 @@ class LocationDetail extends StatelessWidget {
       child: Image.network(
         url,
         fit: BoxFit.fitWidth,
-      ),
-    );
-  }
-
-  Widget _section(String title, Color color) {
-    return Container(
-      decoration: BoxDecoration(
-        color: color,
-      ),
-      child: Text(
-        title,
-        textAlign: TextAlign.center,
       ),
     );
   }

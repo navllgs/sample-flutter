@@ -10,6 +10,7 @@ final List<Location> mockLocations = MockLocation.FetchAll();
 void main() {
   return runApp(
     MaterialApp(
+      onGenerateRoute: Routes.routes(),
       // home: LocationDetail(mockLocation),
       // home: LocationList(mockLocations),
       // initialRoute: '/',
@@ -17,7 +18,6 @@ void main() {
       //   '/': (context) => LocationList(mockLocations),
       //   '/location_detail': (context) => LocationDetail(null)
       // },
-      onGenerateRoute: Routes.routes(),
     ),
   );
 }

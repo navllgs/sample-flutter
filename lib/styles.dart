@@ -6,10 +6,8 @@ class Styles {
   static final Color _textColorStrong = _hexToColor('0000000');
   static final Color _textColorDefault = _hexToColor('666666');
   static final String _fontNameDefault = 'Muli';
-  
-  static final navBarTitleStyle = TextStyle(
-    fontFamily: _fontNameDefault
-  );
+
+  static final navBarTitleStyle = TextStyle(fontFamily: _fontNameDefault);
 
   static final headerLarge = TextStyle(
     fontWeight: FontWeight.bold,
@@ -25,5 +23,14 @@ class Styles {
 
   static Color _hexToColor(String code) {
     return Color(int.parse(code.substring(0, 6), radix: 16) + 0xFF000000);
+  }
+
+  static Widget AppBarDefault(String text) {
+    return AppBar(
+      title: Text(
+        text,
+        style: Styles.navBarTitleStyle,
+      ),
+    );
   }
 }
