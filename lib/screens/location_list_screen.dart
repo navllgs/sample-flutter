@@ -16,12 +16,17 @@ class LocationList extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: Styles.AppBarDefault("Locations"),
-      body: ListView.builder(
-        itemCount: this.locations.length,
-        itemBuilder: (context, index) {
-          return _listItemBuilder(context, this.locations[index]);
-        },
-      ),
+      body: Column(children: [
+        Expanded(
+          child: ListView.builder(
+            itemCount: this.locations.length,
+            itemBuilder: (context, index) {
+              return Text(this.locations[index].name);
+              // _listItemBuilder(context, this.locations[index]);
+            },
+          ),
+        )
+      ]),
       //above code implements like recyclerview in android
       //generate only the visible part of the screen,
       //********************/
