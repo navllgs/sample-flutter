@@ -11,7 +11,7 @@ class LocationDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey[200],
-        appBar: Styles.AppBarDefault(this.location.name),
+        appBar: Styles.appBarDefault(this.location.name),
         body: SingleChildScrollView(
           child: Container(
             margin: EdgeInsets.all(8),

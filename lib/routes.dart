@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import './screens/location_detail_screen.dart';
 import './screens/location_list_screen.dart';
 import './screens/post_list_screen.dart';
-const PostListRoute = '/';
+import './screens/profile_screen.dart';
+
+const PostListRoute = '/profile';
 const LocationsDetailRoute = '/location_detail';
 const LocationsRoute = '/location_list';
+const ProfileRoute = '/';
 
 class Routes {
   static RouteFactory routes() {
@@ -21,6 +24,9 @@ class Routes {
           break;
         case PostListRoute:
           screen = PostList();
+          break;
+        case ProfileRoute:
+          screen = Profile();
           break;
         default:
         return null;

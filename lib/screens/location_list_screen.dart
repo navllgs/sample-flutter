@@ -15,14 +15,14 @@ class LocationList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: Styles.AppBarDefault("Locations"),
+      appBar: Styles.appBarDefault("Locations"),
       body: Column(children: [
         Expanded(
           child: ListView.builder(
             itemCount: this.locations.length,
             itemBuilder: (context, index) {
-              return Text(this.locations[index].name);
-              // _listItemBuilder(context, this.locations[index]);
+              // return Text(this.locations[index].name);
+              return _listItemBuilder(context, this.locations[index]);
             },
           ),
         )

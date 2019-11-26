@@ -25,12 +25,22 @@ class Styles {
     return Color(int.parse(code.substring(0, 6), radix: 16) + 0xFF000000);
   }
 
-  static Widget AppBarDefault(String text) {
+  static Widget appBarDefault(String text) {
     return AppBar(
       title: Text(
         text,
         style: Styles.navBarTitleStyle,
       ),
+      centerTitle: true,
+      backgroundColor: Colors.purple[900],
+      // actions: <Widget>[
+      //   Row(
+      //     children: <Widget>[
+      //       Text('nice'),
+      //       Text('data'),
+      //     ],
+      //   )
+      // ],
     );
   }
 }
